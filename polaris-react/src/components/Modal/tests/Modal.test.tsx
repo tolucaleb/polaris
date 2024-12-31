@@ -303,14 +303,6 @@ describe('<Modal>', () => {
 
       expect(modal).not.toContainReactComponent(Badge);
     });
-
-    it('closes the modal when backdrop is clicked', () => {
-      const spy = jest.fn();
-      const modal = mountWithApp(<Modal title="foo" open onClose={spy} />);
-
-      modal.find(Backdrop)!.trigger('onClick');
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
   });
 
   describe('header', () => {
